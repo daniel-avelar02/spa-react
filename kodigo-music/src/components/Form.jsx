@@ -12,8 +12,8 @@ const Form = () => {
 
   const validate = () => {
     const errors = {};
-    if (!formData.name) errors.name = 'Name is required';
-    if (!formData.email) errors.email = 'Email is required';
+    if (!formData.name) errors.name = 'Nombre es obligatorio';
+    if (!formData.email) errors.email = 'Email es obligatorio';
     return errors;
   };
 
