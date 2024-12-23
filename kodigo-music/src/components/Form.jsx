@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 const Form = () => {
   const [formData, setFormData] = useState({ name: '', email: '' });
   const [errors, setErrors] = useState({});
+  const [submittedData, setSubmittedData] = useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -20,26 +21,37 @@ const Form = () => {
     e.preventDefault();
     const errors = validate();
     if (Object.keys(errors).length === 0) {
-      console.log('Form data:', formData);
+      setSubmittedData(formData);
+      setFormData({ name: '', email: '' });
+      setErrors({});
     } else {
       setErrors(errors);
     }
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label>Name:</label>
-        <input type="text" name="name" value={formData.name} onChange={handleChange} />
-        {errors.name && <span>{errors.name}</span>}
-      </div>
-      <div>
-        <label>Email:</label>
-        <input type="email" name="email" value={formData.email} onChange={handleChange} />
-        {errors.email && <span>{errors.email}</span>}
-      </div>
-      <button type="submit">Submit</button>
-    </form>
+    <div className='container'>
+      {submittedData ? (
+        <div>
+          <h2>Bienvenido, {submittedData.name}!</h2>
+          <p>Tu correo electrónico es: {submittedData.email}</p>
+        </div>
+      ) : (
+        <form onSubmit={handleSubmit}>
+          <div>
+            <label>Nombre:</label>
+            <input type="text" name="name" value={formData.name} onChange={handleChange} />
+            {errors.name && <span>{errors.name}</span>}
+          </div>
+          <div>
+            <label>Email:</label>
+            <input type="email" name="email" value={formData.email} onChange={handleChange} />
+            {errors.email && <span>{errors.email}</span>}
+          </div>
+          <button type="submit">Enviar</button>
+        </form>
+      )}
+    </div>
   );
 };
 

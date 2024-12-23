@@ -5,9 +5,9 @@ const Navbar = () => {
   return (
     <nav>
       <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/about">About</Link></li>
-        <li><Link to="/form">Form</Link></li>
+        <li><Link to="/">Inicio</Link></li>
+        <li><Link to="/form">Formulario</Link></li>
+        <li><Link to="/about">Sobre nosotros</Link></li>
       </ul>
     </nav>
   );
