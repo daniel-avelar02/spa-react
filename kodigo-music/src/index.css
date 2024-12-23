@@ -1,0 +1,187 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+form {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form div {
+  margin-bottom: 1rem;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+form input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form span {
+  color: red;
+  font-size: 0.875rem;
+}
+
+.content {
+  margin-bottom: 4rem; /* Add space for the player */
+}
+
+.container {
+  margin: 0 2rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul li button {
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+ul li button:hover {
+  background-color: #0056b3;
+}
+
+.player {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.player audio {
+  display: none; /* Hide the default audio controls */
+}
+
+.player-controls button {
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 0.5rem;
+}
+
+.player-controls button:hover {
+  background-color: #0056b3;
+}
+
+.progress-bar {
+  cursor: pointer;
+  width: 80%;
+  margin-top: 0.5rem;
+}
+
+.volume-controls i {
+  margin-right: 0.5rem;
+}
+
+.volume-controls input[type="range"] {
+  vertical-align: middle;
+}
+
+.player-info h3 {
+  margin: 0.5rem;
+}
+
+.player-info p {
+  margin: 0.5rem;
+  font-size: 0.875rem;
+  color: #ccc;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 767px) {
+  .player-info {
+    text-align: center;
+
+  }
+
+  .player-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5rem;
+  }
+
+  .volume-controls {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+  }
+}
+
+/* Estilos para pantallas grandes (laptops y tablets) */
+@media (min-width: 768px) {
+  .player-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .player-info {
+    text-align: left;
+    margin-left: 1rem;
+  }
+
+  
+  .volume-controls {
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+  }
+}
