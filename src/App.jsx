@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
 import About from './components/About';
 import Form from './components/Form';
@@ -85,7 +85,7 @@ function App() {
     <Router>
       <Navbar />
       <Routes>
-        <Route path="/spa-react" element={<Home playSong={playSong} currentSongIndex={currentSongIndex} isPlaying={isPlaying} />} />
+        <Route path="/" element={<Home playSong={playSong} currentSongIndex={currentSongIndex} isPlaying={isPlaying} />} />
         <Route path="/about" element={<About />} />
         <Route path="/form" element={<Form />} />
       </Routes>

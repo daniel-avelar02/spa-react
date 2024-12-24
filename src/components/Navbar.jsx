@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <nav>
       <ul>
-        <li><Link to="/spa-react">Inicio</Link></li>
+        <li><Link to="/">Inicio</Link></li>
         <li><Link to="/form">Formulario</Link></li>
         <li><Link to="/about">Sobre nosotros</Link></li>
       </ul>
