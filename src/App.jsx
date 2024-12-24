@@ -6,9 +6,9 @@ import Form from './components/Form';
 import Navbar from './components/Navbar';
 
 const songs = [
-  { title: '¿Por qué te conocí?', artist: 'Luis Miguel', src: '/spa-react/music/porQueTeConoci.mp3' },
-  { title: 'Tengo todo excepto a tí', artist: 'Luis Miguel', src: '/spa-react/music/tengoTodoExceptoATi.mp3' },
-  { title: 'Voy a apagar la luz', artist: 'Luis Miguel', src: '/spa-react/music/voyAApagarLaLuzContigoAprendi.mp3' },
+  { title: '¿Por qué te conocí?', artist: 'Luis Miguel', src: `${process.env.PUBLIC_URL}/music/porQueTeConoci.mp3` },
+  { title: 'Tengo todo excepto a tí', artist: 'Luis Miguel', src: `${process.env.PUBLIC_URL}/music/tengoTodoExceptoATi.mp3` },
+  { title: 'Voy a apagar la luz', artist: 'Luis Miguel', src: `${process.env.PUBLIC_URL}/music/voyAApagarLaLuzContigoAprendi.mp3` },
 ];
 
 function App() {
